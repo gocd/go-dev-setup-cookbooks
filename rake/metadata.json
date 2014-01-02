@@ -1,0 +1,9 @@
+{
+  "name": "rake",
+  "maintainer": "Ernie Brodeur",
+  "maintainer_email": "Ernie Brodeur",
+  "license": "Beer-ware v42",
+  "description": "Installs/Configures rake.",
+  "long_description": "# Description\n\n\nA (very) simple LWRP to provide access to rake as a resource.\n\n# Requirements\n\nNone.\n\n# Attributes\n\n\n```ruby\nattribute :arguments, :kind_of => String, :required => true\n```\nThe list of arguments to pass to rake.\n```ruby\nattribute :working_directory, :kind_of => String, :required => true\n```\nThe working directory rake will be executed in.\n\n# Usage\n\n### Make sure rake is installed locally: \n```ruby\ninclude_recipe 'rake' \n```\n\n### Set Path\nCurrently it expects to find rake on the PATH env variable.  Use this in a recipe to ensure it can (this is an example\nfor ubuntu 10.04).\n\n```ruby\nENV[\"PATH\"] += \":/var/lib/gems/1.8/bin\"\n```\n### Finally, this is how we make rake run.\n\n```ruby\nrake :run do\n  working_directory \"/tmp\"\n  arguments \"--help\"\n  action :run\nend\n```\n\n# TODO\n\nLots, including\n\n* fixing the need for action :run.\n* Adding path statements per platform automagically.\n* Adding versioning via an attribute or data_bag.\n* Adding support to specific rake + ruby version (for multi versioned systems).\n* Proper platform support, this should be easy (but a bit time consuming as I don't use every platform ever.)",
+  "version": "0.1.1"
+}
