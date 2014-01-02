@@ -6,3 +6,4 @@ cookbooks/ruby: https://github.com/jtimberman/ruby-cookbook.git: 2c26adc Merge p
 cookbooks/rake: https://github.com/erniebrodeur/chef-recipe-rake.git: 315985e Added a metadata.json.
 cookbooks/sass: https://github.com/jtgraphic/opscode-chef-cookbook-sass.git: 825180c keeping sass from installing every time
 cookbooks/maven: https://github.com/opscode-cookbooks/maven: 544ad33 Version bump to v1.1.1
+cookbooks/ark: https://github.com/opscode-cookbooks/ark: c2d1969 Version bump to v0.4.3

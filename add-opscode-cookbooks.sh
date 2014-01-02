@@ -21,6 +21,8 @@ download https://github.com/opscode-cookbooks/java.git java
 download https://github.com/jtimberman/ruby-cookbook.git ruby
 download https://github.com/erniebrodeur/chef-recipe-rake.git rake
 download https://github.com/jtgraphic/opscode-chef-cookbook-sass.git sass
+
 download https://github.com/opscode-cookbooks/maven maven
+download https://github.com/opscode-cookbooks/ark ark
 
 tar zcvf cookbooks.tar.gz cookbooks/
