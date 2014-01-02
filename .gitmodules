@@ -1,0 +1,21 @@
+[submodule "chef-zip"]
+	path = chef-zip
+	url = https://github.com/phlipper/chef-zip
+[submodule "git"]
+	path = git
+	url = https://github.com/opscode-cookbooks/git.git
+[submodule "subversion"]
+	path = subversion
+	url = https://github.com/opscode-cookbooks/subversion.git
+[submodule "java"]
+	path = java
+	url = http://github.com/opscode-cookbooks/java.git
+[submodule "ruby-cookbook"]
+	path = ruby-cookbook
+	url = https://github.com/jtimberman/ruby-cookbook.git
+[submodule "chef-recipe-rake"]
+	path = chef-recipe-rake
+	url = https://github.com/erniebrodeur/chef-recipe-rake.git
+[submodule "opscode-chef-cookbook-sass"]
+	path = opscode-chef-cookbook-sass
+	url = https://github.com/jtgraphic/opscode-chef-cookbook-sass.git
