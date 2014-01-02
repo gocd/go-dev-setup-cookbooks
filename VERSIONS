@@ -1,8 +1,8 @@
-zip: https://github.com/phlipper/chef-zip: e847d5e bump version to 1.1.0
-git: https://github.com/opscode-cookbooks/git.git: fe2713e Version bump to v2.9.1
-subversion: https://github.com/opscode-cookbooks/subversion.git: 6ac4a3b Version bump to v1.1.3
-java: https://github.com/opscode-cookbooks/java.git: e7ac547 Version bump to v1.17.3
-ruby: https://github.com/jtimberman/ruby-cookbook.git: 2c26adc Merge pull request #3 from skottler/remove_mode
-rake: https://github.com/erniebrodeur/chef-recipe-rake.git: 315985e Added a metadata.json.
-sass: https://github.com/jtgraphic/opscode-chef-cookbook-sass.git: 825180c keeping sass from installing every time
-maven: https://github.com/opscode-cookbooks/maven: 544ad33 Version bump to v1.1.1
+cookbooks/zip: https://github.com/phlipper/chef-zip: e847d5e bump version to 1.1.0
+cookbooks/git: https://github.com/opscode-cookbooks/git.git: fe2713e Version bump to v2.9.1
+cookbooks/subversion: https://github.com/opscode-cookbooks/subversion.git: 6ac4a3b Version bump to v1.1.3
+cookbooks/java: https://github.com/opscode-cookbooks/java.git: e7ac547 Version bump to v1.17.3
+cookbooks/ruby: https://github.com/jtimberman/ruby-cookbook.git: 2c26adc Merge pull request #3 from skottler/remove_mode
+cookbooks/rake: https://github.com/erniebrodeur/chef-recipe-rake.git: 315985e Added a metadata.json.
+cookbooks/sass: https://github.com/jtgraphic/opscode-chef-cookbook-sass.git: 825180c keeping sass from installing every time
+cookbooks/maven: https://github.com/opscode-cookbooks/maven: 544ad33 Version bump to v1.1.1

@@ -2,7 +2,7 @@
 
 function download {
   local url="$1"
-  local path="$2"
+  local path="cookbooks/$2"
 
   rm -rf "${path}"
 
