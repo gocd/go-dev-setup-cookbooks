@@ -5,7 +5,7 @@ script "startup-setup-console" do
   user "root"
   cwd "/home/vagrant"
   code <<-EOH
-    sed -e 's#exec /sbin/getty#& --autologin vagrant#' /etc/init/tty1.conf
+    sed -i -e 's#exec /sbin/getty#& --autologin vagrant#' /etc/init/tty1.conf
   EOH
 end
 
