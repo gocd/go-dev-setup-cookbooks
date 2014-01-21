@@ -17,19 +17,35 @@
 # limitations under the License.
 #
 
-# install the necessary tools based on the environment
-
 ## intellij
 
 cookbook_file "/usr/share/applications/intellij.desktop" do
   source "ubuntu.intellij.desktop"
-  #owner node[:rice][:user]
   backup false
   mode "0777"
 end
 
+["/home/vagrant/.IdeaIC13", "/home/vagrant/.IdeaIC13/config", "/home/vagrant/.IdeaIC13/config/options"].each do |dir|
+  directory dir do
+    owner "vagrant"
+    group "vagrant"
+    mode 00755
+    recursive true
+    action :create
+  end
+end
+
+cookbook_file "/home/vagrant/.IdeaIC13/config/options/jdk.table.xml" do
+  source "jdk.table.xml"
+  owner "vagrant"
+  group "vagrant"
+  backup false
+  mode "0664"
+end
+
 intellij_mirror_site = "http://download-ln.jetbrains.com/idea/ideaIC-13.0.1.tar.gz"
 intellij_file = "ideaIC-13.0.1.tar.gz"
+
 script "install_intellij" do
   interpreter "bash"
   user "root"
