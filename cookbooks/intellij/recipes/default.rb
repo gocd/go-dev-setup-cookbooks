@@ -20,9 +20,11 @@
 ## intellij
 
 cookbook_file "/usr/share/applications/intellij.desktop" do
+  owner "vagrant"
+  group "vagrant"
   source "ubuntu.intellij.desktop"
   backup false
-  mode "0777"
+  mode "0644"
 end
 
 ["/home/vagrant/.IdeaIC13", "/home/vagrant/.IdeaIC13/config", "/home/vagrant/.IdeaIC13/config/options"].each do |dir|
