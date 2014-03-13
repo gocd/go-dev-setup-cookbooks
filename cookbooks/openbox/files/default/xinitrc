@@ -1,0 +1,2 @@
+/opt/intellij/idea-IC/bin/idea.sh /home/vagrant/cruise/pom.xml & disown
+exec openbox
