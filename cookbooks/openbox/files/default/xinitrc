@@ -1,2 +1,3 @@
 /opt/intellij/idea-IC/bin/idea.sh /home/vagrant/cruise/pom.xml & disown
+cairo-dock -c & disown
 exec openbox
