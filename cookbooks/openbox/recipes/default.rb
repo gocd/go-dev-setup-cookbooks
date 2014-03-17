@@ -16,7 +16,7 @@ cookbook_file "/home/vagrant/.bash_profile" do
   mode "0664"
 end
 
-["/home/vagrant/.config/", "/home/vagrant/.config/openbox"].each do |dir|
+["/home/vagrant/.config/", "/home/vagrant/.config/openbox/"].each do |dir|
   directory dir do
     owner "vagrant"
     group "vagrant"
@@ -35,7 +35,7 @@ script "install_openbox" do
 
   sudo apt-get install -y cairo-dock
 
-  cp -R /etc/xdg/openbox/* ~/.config/openbox
+  cp -R /etc/xdg/openbox/* /home/vagrant/.config/openbox
   EOH
 end
 
