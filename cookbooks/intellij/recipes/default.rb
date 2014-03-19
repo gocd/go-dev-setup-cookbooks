@@ -45,8 +45,8 @@ cookbook_file "/home/vagrant/.IdeaIC13/config/options/jdk.table.xml" do
   mode "0664"
 end
 
-intellij_mirror_site = "http://download-ln.jetbrains.com/idea/ideaIC-13.0.1.tar.gz"
-intellij_file = "ideaIC-13.0.1.tar.gz"
+intellij_mirror_site = "http://download.jetbrains.com/idea/ideaIC-13.1.tar.gz"
+intellij_file = "ideaIC-13.1.tar.gz"
 
 script "install_intellij" do
   interpreter "bash"
@@ -59,7 +59,7 @@ script "install_intellij" do
   wget #{intellij_mirror_site}
   tar -zxvf #{intellij_file}
   find . -maxdepth 1 -name "idea-IC*" -type d | head -1 | xargs -i sudo ln -s {} idea-IC
-  rm -rf idea-IC*.tar.gz
+  rm -f idea-IC*.tar.gz
   EOH
   only_if do ! File.exists?("/opt/intellij/idea-IC/bin/idea.sh") end
 end
