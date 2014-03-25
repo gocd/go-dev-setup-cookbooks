@@ -7,6 +7,7 @@ script "startup-setup" do
   code <<-EOH
   echo "autologin-user=vagrant" >> /etc/lightdm/lightdm.conf
   echo "autologin-user-timeout=0" >> /etc/lightdm/lightdm.conf
+  passwd -d vagrant
   mkdir -p /home/vagrant/Desktop
   cp /usr/share/applications/intellij.desktop /home/vagrant/Desktop/intellij.desktop
   cp /usr/share/applications/intellij.desktop /etc/xdg/autostart

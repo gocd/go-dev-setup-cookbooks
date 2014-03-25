@@ -24,10 +24,10 @@ cookbook_file "/usr/share/applications/intellij.desktop" do
   group "vagrant"
   source "ubuntu.intellij.desktop"
   backup false
-  mode "0644"
+  mode "0755"
 end
 
-["/home/vagrant/.IdeaIC13", "/home/vagrant/.IdeaIC13/config", "/home/vagrant/.IdeaIC13/config/options"].each do |dir|
+["/home/vagrant/misc_go_files" ,"/home/vagrant/.IdeaIC13", "/home/vagrant/.IdeaIC13/config", "/home/vagrant/.IdeaIC13/config/options"].each do |dir|
   directory dir do
     owner "vagrant"
     group "vagrant"
@@ -35,6 +35,22 @@ end
     recursive true
     action :create
   end
+end
+
+cookbook_file "/home/vagrant/misc_go_files/open_go_in_intellij.sh" do
+  owner "vagrant"
+  group "vagrant"
+  source "open_go_in_intellij.sh"
+  backup false
+  mode "0755"
+end
+
+cookbook_file "/home/vagrant/misc_go_files/workspace.xml" do
+  owner "vagrant"
+  group "vagrant"
+  source "workspace.xml"
+  backup false
+  mode "0664"
 end
 
 cookbook_file "/home/vagrant/.IdeaIC13/config/options/jdk.table.xml" do
