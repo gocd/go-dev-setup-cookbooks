@@ -75,7 +75,7 @@ script "install_intellij" do
   wget #{intellij_mirror_site}
   tar -zxvf #{intellij_file}
   find . -maxdepth 1 -name "idea-IC*" -type d | head -1 | xargs -i sudo ln -s {} idea-IC
-  rm -f idea-IC*.tar.gz
+  rm -f ideaIC*.tar.gz
   EOH
   only_if do ! File.exists?("/opt/intellij/idea-IC/bin/idea.sh") end
 end
